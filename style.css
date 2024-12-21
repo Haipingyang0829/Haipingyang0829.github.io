@@ -146,6 +146,7 @@ h1 {
 }
 
 .作品集{
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
