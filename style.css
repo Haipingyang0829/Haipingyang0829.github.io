@@ -146,16 +146,36 @@ h1 {
 }
 
 .作品集{
-    padding: 30px;
+    
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    padding: 30px;
+}
+.work-item{
+    /* 去白邊 */
+    line-height: 0;
 }
 .work-item img{
     /* 最大寬度 */
     max-width: 100%;
     /* 高度自動 */
     height: auto;
+    /* 物件符合復原鍵 obf */
+    object-fit: cover ;
+    /* 比例(幾/幾) asp */
+    aspect-ratio: 1/1 ;
+    /* 濾鏡 fit */
+    filter:blur(20px);
     /* 圖片響應式 */
+}
+/* hover 滑鼠移動到身上 */
+.work-item img:hover{
+    /* 物件符合復原鍵 obf */
+    object-fit: cover ;
+    /* 比例(幾/幾) asp */
+    aspect-ratio: 1/2 ;
+    /* 濾鏡 fit */
+    filter: blur(0px) ;
 }
 
 .top {
@@ -197,4 +217,14 @@ h1 {
 
 body {
     height: 2000px;
+}
+/* @media 媒體設定 */
+/* 列印時設定 */
+@media print{
+    .photo{
+        display: none;
+    }
+    h1{
+        font-size: 200px;
+    }
 }
